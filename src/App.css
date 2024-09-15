@@ -1,38 +1,78 @@
-.App {
+.root{
+  height: 100%;
+}
+.login-css {
+  background-color: blueviolet;
+  display: flex;
+  
+}
+
+
+.login-button {
+  background: transparent;
+  background-color: aquamarine;
+  border: 1px solid blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.welcome{
+  background-image: radial-gradient(blueviolet, aquamarine);
+  height: auto;
+  width: auto;
+  max-height: fit-content;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.home-page {
+  display: flex;
+  width: auto;
+  height: max-content;
+  background-image: radial-gradient(blueviolet, aquamarine);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+  user-select: text;
+  gap: var(--gap);
+  border: 2px dashed brown;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+.marquee__content img {
+  max-width: 2rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+.marquee__content>* {
+  flex: 0 0 auto;
   color: white;
+  background: #e8daef;
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.marquee__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
